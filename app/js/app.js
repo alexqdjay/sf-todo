@@ -1,16 +1,32 @@
-'use strict';
+/**
+ * mainApp
+ *
+ * by alex
+ *
+ */
+
+;
+(function(){
+    'use strict';
+
+	angular.module('sf.const',[]);
+	angular.module('sf.services',['sf.const']);
+	angular.module('sf.filters',[]);
+	angular.module('sf.directives',['sf.const']);
+	angular.module('sf.routers',['sf.const','ui.router']);
+	angular.module('sf.controllers',['sf.services']);
+
+	// Declare app level module which depends on filters, and services
+	angular.module('sf.mainApp', [
+		'sf.services',
+		'sf.directives',
+		'sf.controllers',
+		'sf.routers'
+	]);
+
+})();
 
 
-// Declare app level module which depends on filters, and services
-angular.module('myApp', [
-  'ngRoute',
-  'myApp.filters',
-  'myApp.services',
-  'myApp.directives',
-  'myApp.controllers'
-]).
-config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/view1', {templateUrl: 'app/views/partial1.html', controller: 'MyCtrl1'});
-  $routeProvider.when('/view2', {templateUrl: 'app/views/partial2.html', controller: 'MyCtrl2'});
-  $routeProvider.otherwise({redirectTo: '/view1'});
-}]);
+
+
+
