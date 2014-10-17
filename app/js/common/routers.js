@@ -18,7 +18,7 @@
 				url:'/',
 				views:{
 					'':{
-						template:'121212'
+						templateUrl: BaseUrl + 'app/views/infra/home_view.html'
 					}
 				}
 			});
