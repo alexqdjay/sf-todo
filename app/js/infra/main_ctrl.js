@@ -15,6 +15,13 @@
 				$scope.menus = res;
 			});
 
+			$scope.onMenuClick = function(menu){
+				if(menu.children && menu.children.length>0) {
+					menu.open = menu.open === true?false:true;
+				}
+			}
+
+
 	}]);
 
 })();

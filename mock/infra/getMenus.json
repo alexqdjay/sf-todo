@@ -3,5 +3,12 @@
 	"label":"Hello World"
 },{
 	"name":"helloWorld2",
-	"label":"Hello World!"
+	"label":"Hello World!",
+	"children":[{
+		"name":"aaa",
+		"label":1
+	},{
+		"name":"bbb",
+		"label":2
+	}]
 }]
