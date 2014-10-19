@@ -3,3 +3,18 @@
 #mainContianer{
     margin-top: 51px;
 }
+
+.wrap-icon-input{
+    display: inline-block;
+    color: #ccc;
+}
+
+.wrap-icon-input > .glyphicon{
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 8px;
+}
+
+.wrap-icon-input input{
+    padding-left: 26px;
+}

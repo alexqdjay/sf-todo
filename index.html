@@ -11,8 +11,47 @@
 <body ng-controller="MainCtrl">
 
     <!-- menu -->
-    <nav class="navbar navbar-default navbar-fixed-top" ng-include src="'app/views/infra/menu_view.html'">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" ui-sref="home">Todo</a>
+            </div>
 
+            <div class="collapse navbar-collapse">
+
+                <!-- Menu -->
+                <ul class="nav navbar-nav">
+                    <li ng-repeat="menu in menus" ng-class="{'dropdown':menu.children && menu.children.length>0,'open':menu.open, 'active':$state.includes(menu.name)}"
+                        ng-click="onMenuClick(menu)">
+                        <a ui-sref="{{menu.name}}" ng-show="!menu.children || menu.children.length == 0">
+                            {{menu.label}}
+                        </a>
+                        <a ng-show="menu.children && menu.children.length > 0">
+                            {{menu.label}}<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li ng-repeat="item in menu.children">
+                                <a ui-sref="{{item.name}}">{{item.label}}</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <form class="navbar-form navbar-right" role="form" autocomplete="off">
+                    <div class="wrap-icon-input">
+                        <span class="glyphicon glyphicon-user"></span>
+                        <input type="text" name="username" class="form-control input-sm" placeholder="用户名">
+                    </div>
+                    <div class="wrap-icon-input">
+                        <span class="glyphicon glyphicon-lock"></span>
+                        <input type="login" name="password" class="form-control input-sm" placeholder="密码">
+                    </div>
+                    <button type="button" class="btn btn-primary btn-sm">登录</button>
+                    <button type="button" class="btn btn-default btn-sm">注册</button>
+                </form>
+            </div>
+            <!--/.navbar-collapse -->
+        </div>
     </nav>
 
     <!-- Main -->

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-cn" ng-app="sf.mainApp">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Todo</title>
+    <link rel="stylesheet" href="bower_components/bootstrap-3.2.0-dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="app/css/app.css"/>
+</head>
+<body ng-controller="MainCtrl">
+
+    <!-- menu -->
+    <nav class="navbar navbar-default navbar-fixed-top" ng-include src="'app/views/infra/menu_view.html'">
+
+    </nav>
+
+    <!-- Main -->
+    <div class="container" ui-view id="mainContianer">
+
+
+    </div>
+
+    <!-- footer -->
+    <hr>
+    <footer>
+        <p>&copy; Company 2014</p>
+    </footer>
+
+
+</body>
+
+<!-- In production use:
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+-->
+<script src="bower_components/jquery/jquery-1.11.1.min.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<!--script src="bower_components/angular-route/angular-route.js"></script>-->
+<script src="bower_components/angular-ui/angular-ui-router.min.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+
+<script src="app/js/app.js"></script>
+<script src="app/js/common/config.js"></script>
+
+<!-- Common Service -->
+<script src="app/js/infra/menu_service.js"></script>
+
+<!-- Bussiness Ctrls & routers & services -->
+<script src="app/js/test/helloWorld_router.js"></script>
+<script src="app/js/test/helloWorld_ctrl.js"></script>
+
+<!-- load in the end -->
+<script src="app/js/common/routers.js"></script>
+<script src="app/js/infra/main_ctrl.js"></script>
+
+</html>
