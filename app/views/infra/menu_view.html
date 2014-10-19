@@ -7,8 +7,8 @@
 
         <!-- Menu -->
         <ul class="nav navbar-nav">
-            <li ng-repeat="menu in menus" ng-class="{'has-submenu':menu.children && menu.children.length>0,'open':menu.open}"
-                ng-click="onMenuClick(menu)" ng-mouseenter="menu.open=true&&menu.children.length>0" ng-mouseleave="menu.open=false">
+            <li ng-repeat="menu in menus" ng-class="{'dropdown':menu.children && menu.children.length>0,'open':menu.open, 'active':$state.includes(menu.name)}"
+                ng-click="onMenuClick(menu)">
                 <a ui-sref="{{menu.name}}" ng-show="!menu.children || menu.children.length == 0">
                     {{menu.label}}
                 </a>
