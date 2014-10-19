@@ -18,6 +18,17 @@
 				}
 			}
 		});
+
+        Config.routers.push({
+            name:'test',
+            url:'/test',
+            views:{
+                '':{
+                    templateUrl: BaseUrl + 'app/views/test_view.html',//命名一定要规范
+                    controller:'TestCtrl'
+                }
+            }
+        });
 	});
 
 })();

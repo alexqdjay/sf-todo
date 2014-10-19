@@ -2,6 +2,9 @@
 	"name":"helloWorld",
 	"label":"Hello World"
 },{
+    "name":"test",
+    "label":"Test"
+},{
 	"name":"helloWorld2",
 	"label":"Hello World!",
 	"children":[{
