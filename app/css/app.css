@@ -1,5 +1,13 @@
 /* app css stylesheet */
 
+html,body {
+    font-family: Arial, Microsoft YaHei;
+}
+
+a:focus{
+    outline: none;
+}
+
 #mainContianer{
     margin-top: 51px;
 }
@@ -17,4 +25,17 @@
 
 .wrap-icon-input input{
     padding-left: 26px;
+}
+
+.brands{
+    list-style: none;
+}
+
+.brands > li{
+    display: inline-block;
+    margin-right: 4px;
+}
+
+.brands > li:last-child{
+    margin-right: 0px;
 }

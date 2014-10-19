@@ -21,8 +21,7 @@
 
                 <!-- Menu -->
                 <ul class="nav navbar-nav">
-                    <li ng-repeat="menu in menus" ng-class="{'dropdown':menu.children && menu.children.length>0,'open':menu.open, 'active':$state.includes(menu.name)}"
-                        ng-click="onMenuClick(menu)">
+                    <li ng-repeat="menu in menus" ng-class="{'dropdown':menu.children && menu.children.length>0,'open':menu.open, 'active':$state.includes(menu.name)}">
                         <a ui-sref="{{menu.name}}" ng-show="!menu.children || menu.children.length == 0">
                             {{menu.label}}
                         </a>
@@ -46,8 +45,8 @@
                         <span class="glyphicon glyphicon-lock"></span>
                         <input type="login" name="password" class="form-control input-sm" placeholder="密码">
                     </div>
-                    <button type="button" class="btn btn-primary btn-sm">登录</button>
-                    <button type="button" class="btn btn-default btn-sm">注册</button>
+                    <a type="submit" class="btn btn-primary btn-sm">登录</a>
+                    <a type="button" href="logup.html" class="btn btn-default btn-sm">注册</a>
                 </form>
             </div>
             <!--/.navbar-collapse -->
@@ -55,7 +54,7 @@
     </nav>
 
     <!-- Main -->
-    <div class="container" ui-view id="mainContianer">
+    <div ui-view id="mainContianer">
 
 
     </div>
