@@ -11,21 +11,43 @@
 <body ng-controller="MainCtrl">
 
     <!-- menu -->
-    <nav class="navbar navbar-default navbar-fixed-top" ng-include src="'app/views/infra/menu_view.html'">
+    <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" style="margin-bottom:0px;"
+         ng-include src="'app/views/infra/menu_view.html'">
 
     </nav>
 
+    <!-- side menu -->
+    <section id="sideNav">
+        <ul class="nav">
+            <li class="active">
+                <a><span class="glyphicon glyphicon-music"></span>1xxxx</a>
+            </li>
+            <li>
+                <a><span class="glyphicon glyphicon-music"></span>2xxxxx</a>
+                <ul class="sub-nav">
+                    <li>
+                        <a>2.1xxxx</a>
+                    </li>
+                    <li>
+                        <a>2.2xxxx</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
     <!-- Main -->
-    <div class="container" ui-view id="mainContianer">
+    <div id="mainContianer">
 
 
+        <!-- footer -->
+        <hr>
+        <footer>
+            <p>&copy; Company 2014</p>
+        </footer>
     </div>
 
-    <!-- footer -->
-    <hr>
-    <footer>
-        <p>&copy; Company 2014</p>
-    </footer>
+
 
 
 </body>
