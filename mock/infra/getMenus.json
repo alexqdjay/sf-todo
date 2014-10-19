@@ -1,12 +1,14 @@
 [{
 	"name":"helloWorld",
-	"label":"Hello World"
+	"label":"Hello World",
+	"clazz":"glyphicon-th"
 },{
     "name":"test",
     "label":"Test"
 },{
 	"name":"helloWorld2",
 	"label":"Hello World!",
+	"clazz":"glyphicon-envelope",
 	"children":[{
 		"name":"aaa",
 		"label":1

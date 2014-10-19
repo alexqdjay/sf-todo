@@ -19,17 +19,15 @@
     <!-- side menu -->
     <section id="sideNav">
         <ul class="nav">
-            <li class="active">
-                <a><span class="glyphicon glyphicon-music"></span>1xxxx</a>
-            </li>
-            <li>
-                <a><span class="glyphicon glyphicon-music"></span>2xxxxx</a>
-                <ul class="sub-nav">
-                    <li>
-                        <a>2.1xxxx</a>
-                    </li>
-                    <li>
-                        <a>2.2xxxx</a>
+            <li ng-repeat="menu in menus" ng-class="{'active':$state.includes(menu.name),'has-submenu':menu.children && menu.children.length>0}">
+                <a ng-click="onMenuClick(menu)">
+                    <span class="glyphicon {{menu.clazz}}"></span> {{menu.label}}
+                    <span class="glyphicon pull-right sub-expender glyphicon-chevron-down" ng-show="menu.open"></span>
+                    <span class="glyphicon pull-right sub-expender glyphicon-chevron-right" ng-hide="menu.open"></span>
+                </a>
+                <ul class="sub-nav" ng-show="menu.open">
+                    <li ng-repeat="submenu in menu.children" ng-class="{'active':$state.includes(submenu.name)}">
+                        <a ng-click="onMenuClick(submenu)">{{submenu.label}}</a>
                     </li>
                 </ul>
             </li>
@@ -38,7 +36,7 @@
 
     <!-- Main -->
     <div id="mainContianer">
-
+        <div ui-view=""></div>
 
         <!-- footer -->
         <hr>
@@ -70,6 +68,7 @@
 <!-- Bussiness Ctrls & routers & services -->
 <script src="app/js/test/helloWorld_router.js"></script>
 <script src="app/js/test/helloWorld_ctrl.js"></script>
+<script src="app/js/test/test_ctrl.js"></script>
 
 <!-- load in the end -->
 <script src="app/js/common/routers.js"></script>
