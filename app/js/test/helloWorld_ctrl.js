@@ -10,6 +10,7 @@
 	angular.module('sf.mainApp').controller('HelloWorldCtrl', ['$scope', function($scope){
 
 		$scope.date = new Date();
+        $scope.note ="大海，你全是水！";
 
 
 	}]);

@@ -1,5 +1,22 @@
 <div class="container">
-    <h5>Hello <i>World</i> -- {{date}}</h5>
+    你的姓名：<input type="text" ng-model="yourname" placeholder="World">
+    <h5>Hello {{yourname||'World'}}</i> -- {{note}}{{date}}</h5>
+    <p>1 + 2 = {{ 1 + 2 }}</p>
+    <ul>
+        <li>
+            <span>Nexus S</span>
+            <p>
+                Fast just got faster with Nexus S.
+            </p>
+        </li>
+        <li>
+            <span>Motorola XOOM™ with Wi-Fi</span>
+            <p>
+                The Next, Next Generation tablet.
+            </p>
+        </li>
+    </ul>
+    <p>Total number of phones: 2</p>
     <button type="button" class="btn btn-primary" ui-sref="home">Click Me !</button>
 </div>
 
