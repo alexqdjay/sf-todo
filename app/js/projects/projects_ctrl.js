@@ -7,10 +7,13 @@
 (function () {
 	'use strict';
 
-	angular.module('sf.mainApp').controller('ProjectsCtrl',['$scope',projectsCtrl]);
+	angular.module('sf.mainApp').controller('ProjectsCtrl',['$scope','$http',function ProjectsCtrl($scope,$http) {
 
-	function projectsCtrl($scope) {
+        $http.get('mock/infra/getProjects.json',{tmp:Math.random()}).success(function(data) {
+            $scope.projects=data;
+        });
+    }]);
 
-	}
+
 
 })();
