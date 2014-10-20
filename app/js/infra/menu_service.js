@@ -14,7 +14,9 @@
 			var debug = true;
 			var getUrlFn = UrlGetFunctionFactory.getFn({},{
 				getMenus:'mock/infra/getMenus.json'
-			}, debug);
+			},{
+                tmp:Math.random()
+            }, debug);
 
 			this.getMenus = function() {
 				return $http.get(getUrlFn('getMenus'),{
