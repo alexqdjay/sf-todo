@@ -19,4 +19,8 @@
 		"name":"bbb",
 		"label":2
 	}]
+},{
+	"label":"我的项目",
+	"clazz":"glyphicon-th-large",
+	"name":"projects"
 }]

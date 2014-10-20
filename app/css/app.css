@@ -19,6 +19,12 @@ a:focus{
     margin-left: 220px;
     background-color: #f5f5f5;
     overflow-x: hidden;
+    min-height: 740px;
+}
+
+footer{
+    position: absolute;
+    bottom: 0px;
 }
 
 .navbar-right .badge {
@@ -165,4 +171,31 @@ a:focus{
 
 .brands > li:last-child{
     margin-right: 0px;
+}
+
+/****************************
+*
+*   taskstatistic-blocks
+*
+*****************************/
+
+.task-statistic-blocks {
+    display: inline-block;
+    float: left;
+    width: 33%;
+    height: 60px;
+    border-left: 1px solid #ddd;
+    text-align: center;
+}
+
+.task-statistic-blocks a:hover {
+    text-decoration: none;
+}
+
+.task-statistic-blocks strong {
+    font-size: 24px;
+}
+
+.task-statistic-blocks:first-child {
+    border-left: none;
 }
