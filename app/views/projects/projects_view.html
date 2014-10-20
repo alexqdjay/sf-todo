@@ -6,7 +6,7 @@
             <div class="panel-body">
                 <div class="row">
                     <div class="col-xs-12">
-                        <h4>
+                        <h4 style="margin-top:0px;">
                             <div style="float: right;">
                                 <a style="font-size:12px;" title="编辑项目名">
                                     <span class="glyphicon glyphicon-pencil"></span>
@@ -14,8 +14,8 @@
                             </div>
                             <small style="margin-right:8px;">
                                 <span class="glyphicon glyphicon-folder-open"></span>
-                            </small>{{project.projname}}<br>
-                            <small>创建于:{{project.createtime}}</small>
+                            </small><span ng-bind="project.projname"></span><br>
+                            <small>创建于:<span ng-bind="project.createtime"></span></small>
                         </h4>
                         <hr  style="margin:12px 0px;">
                         <ul class="list-unstyled task-statistic-blocks-container">
