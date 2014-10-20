@@ -6,9 +6,6 @@
     "name":"test",
     "label":"Test"
 },{
-        "name":"project",
-        "label":"项目管理"
- },{
 	"name":"helloWorld2",
 	"label":"Hello World!",
 	"clazz":"glyphicon-envelope",
