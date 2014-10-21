@@ -200,6 +200,21 @@ footer{
     border-left: none;
 }
 
+/****************************
+*
+*   toolbar
+*
+*****************************/
+
+.toolbar {
+    text-align: right;
+    margin-bottom: 0px;
+}
+
+.toolbar > li {
+    display: inline-block;
+}
+
 .panel.active {
     border: 2px solid #C0392B;
 }
