@@ -34,6 +34,10 @@ footer{
     font-size:10px;
 }
 
+hr {
+    border-top-color: #ddd;
+}
+
 /****************************
 *
 *   side nav
@@ -198,6 +202,21 @@ footer{
 
 .task-statistic-blocks:first-child {
     border-left: none;
+}
+
+/****************************
+*
+*   toolbar
+*
+*****************************/
+
+.toolbar {
+    text-align: right;
+    margin-bottom: 0px;
+}
+
+.toolbar > li {
+    display: inline-block;
 }
 
 .panel.active {

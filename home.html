@@ -36,10 +36,33 @@
 
     <!-- Main -->
     <div id="mainContianer">
-        <div ui-view="" class="container-fluid"></div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="panel panel-default" style="border-left:none;border-right:none;border-bottom:1px solid #eee;">
+                    <div class="panel-body" style="padding:8px 15px;">
+                        <div class="row">
+
+                            <ol class="breadcrumb col-xs-5" style="margin:0px;background-color: transparent;">
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Library</a></li>
+                                <li class="active">我的项目</li>
+                            </ol>
+
+                            <div class="col-xs-7">
+                                <ul class="toolbar">
+                                    <li><a class="btn btn-danger">新建项目</a></li>
+                                    <li><a class="btn btn-default">删除项目</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div ui-view=""></div>
+        </div>
 
         <!-- footer -->
-        <hr>
+
         <footer>
             <p>&copy; Company 2014</p>
         </footer>
@@ -72,6 +95,12 @@
 
 <script src="app/js/projects/projects_router.js"></script>
 <script src="app/js/projects/projects_ctrl.js"></script>
+
+<script src="app/js/projects/project_router.js"></script>
+<script src="app/js/projects/project_ctrl.js"></script>
+
+<script src="app/js/tasks/tasks_router.js"></script>
+<script src="app/js/tasks/tasks_ctrl.js"></script>
 
 <!-- load in the end -->
 <script src="app/js/common/routers.js"></script>
