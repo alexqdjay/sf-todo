@@ -34,6 +34,10 @@ footer{
     font-size:10px;
 }
 
+hr {
+    border-top-color: #ddd;
+}
+
 /****************************
 *
 *   side nav

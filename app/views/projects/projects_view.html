@@ -1,3 +1,52 @@
+<h4>当前项目</h4>
+<div class="row">
+    <div class="col-lg-4 col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h4 style="margin-top:0px;">
+                            <div style="float: right;">
+                                <a style="font-size:12px;" title="编辑项目名">
+                                    <span class="glyphicon glyphicon-pencil"></span>
+                                </a>
+                            </div>
+                            <small style="margin-right:8px;">
+                                <span class="glyphicon glyphicon-folder-open"></span>
+                            </small><a>第一个项目</a><br>
+                            <small>创建于:<span ng-bind="project.createtime"></span></small>
+                        </h4>
+                        <hr  style="margin:12px 0px;">
+                        <ul class="list-unstyled task-statistic-blocks-container">
+                            <li class="task-statistic-blocks">
+                                <a class="text-warning">
+                                    <strong>1</strong><br>
+                                    <span class="text-muted">待完成任务</span>
+                                </a>
+                            </li>
+                            <li class="task-statistic-blocks text-danger">
+                                <a class="text-danger">
+                                    <strong>1</strong><br>
+                                    <span class="text-muted">过期任务</span>
+                                </a>
+                            </li>
+                            <li class="task-statistic-blocks">
+                                <a class="text-muted">
+                                    <strong>1</strong><br>
+                                    <span class="text-muted">已完成任务</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<h4>我的项目列表</h4>
 <div class="row">
     <div class="col-lg-4 col-md-6" ng-repeat="project in projects">
         <div class="panel panel-default">
@@ -41,5 +90,4 @@
             </div>
         </div>
     </div>
-
 </div>

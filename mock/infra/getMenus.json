@@ -20,4 +20,8 @@
 	"label":"我的项目",
 	"clazz":"glyphicon-th-large",
 	"name":"projects"
+},{
+	"label":"我的任务",
+	"clazz":"glyphicon-th-list",
+	"name":"allTasks"
 }]
