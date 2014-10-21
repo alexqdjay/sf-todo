@@ -1,7 +1,14 @@
 
-
+<div class="span2">
+    搜索项目：<input ng-model="query">
+    排序方式：
+    <select ng-model="orderProp">
+        <option value="projname">Alphabetical</option>
+        <option value="createtime">Newest</option>
+    </select>
+</div>
 <div class="row">
-    <div class="col-lg-4 col-md-6" ng-repeat="project in projects">
+    <div class="col-lg-4 col-md-6" ng-repeat="project in projects | filter:query | orderBy:orderProp">
         <div class="panel panel-default">
             <div class="panel-body">
                 <div class="row">
