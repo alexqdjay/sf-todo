@@ -8,7 +8,7 @@
 </form>
 <h4>当前项目</h4>
 <div class="row">
-    <div class="col-lg-4 col-md-6">
+    <div class="col-lg-4 col-md-6" ng-repeat="project in projects | filter:{default:'true'}">
         <div class="panel panel-default">
             <div class="panel-body">
                 <div class="row">
@@ -21,27 +21,27 @@
                             </div>
                             <small style="margin-right:8px;">
                                 <span class="glyphicon glyphicon-folder-open"></span>
-                            </small><a ui-sref="projects.project({id:2})">当前项目</a><br>
-                            <small>创建于:<span ng-bind="project.createtime"></span></small>
+                            </small><a>{{project.projname}}</span></a><br>
+                            <small>创建于:<span>{{project.createtime}}</span></small>
                         </h4>
                         <hr  style="margin:12px 0px;">
                         <ul class="list-unstyled task-statistic-blocks-container">
                             <li class="task-statistic-blocks">
                                 <a class="text-warning">
                                     <strong>1</strong><br>
-                                    <span class="text-muted">待完成任务</span>
+                                    <span class="text-muted">要做的任务</span>
                                 </a>
                             </li>
                             <li class="task-statistic-blocks text-danger">
                                 <a class="text-danger">
                                     <strong>1</strong><br>
-                                    <span class="text-muted">过期任务</span>
+                                    <span class="text-muted">在做的任务</span>
                                 </a>
                             </li>
                             <li class="task-statistic-blocks">
                                 <a class="text-muted">
                                     <strong>1</strong><br>
-                                    <span class="text-muted">已完成任务</span>
+                                    <span class="text-muted">完成的任务</span>
                                 </a>
                             </li>
                         </ul>
@@ -71,13 +71,13 @@
                         <h4 style="margin-top:0px;">
                             <div style="float: right;">
                                 <a style="font-size:12px;" title="设为当前项目" ng-click="setDefProj($index)">
-                                    设为当前项目
+                                    <span class="glyphicon glyphicon-home"></span>
                                 </a>
                                 <a style="font-size:12px;" title="编辑项目名">
                                     <span class="glyphicon glyphicon-pencil"></span>
                                 </a>
                                 <a style="font-size:12px;" title="删除项目" ng-click="delProject($index)">
-                                    删除
+                                    <span class="glyphicon glyphicon-remove"></span>
                                 </a>
                             </div>
                             <small style="margin-right:8px;">
@@ -90,19 +90,19 @@
                             <li class="task-statistic-blocks">
                                 <a class="text-warning">
                                     <strong>1</strong><br>
-                                    <span class="text-muted">待完成任务</span>
+                                    <span class="text-muted">要做的任务</span>
                                 </a>
                             </li>
                             <li class="task-statistic-blocks text-danger">
                                 <a class="text-danger">
                                     <strong>1</strong><br>
-                                    <span class="text-muted">过期任务</span>
+                                    <span class="text-muted">在做的任务</span>
                                 </a>
                             </li>
                             <li class="task-statistic-blocks">
                                 <a class="text-muted">
                                     <strong>1</strong><br>
-                                    <span class="text-muted">已完成任务</span>
+                                    <span class="text-muted">完成的任务</span>
                                 </a>
                             </li>
                         </ul>

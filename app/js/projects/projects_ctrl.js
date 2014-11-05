@@ -27,6 +27,14 @@
             $scope.delProject = function($index){
                $scope.projects.splice($index,1);
             }
+            var dfp='';
+            for(var i = 0; i <$scope.projects.length; i++)
+            {
+                if($scope.projects[i].default == true){
+                    dfp=$scope.projects[i];
+                }
+            }
+            $scope.defaultProj =dfp;
         });
     }]);
 
