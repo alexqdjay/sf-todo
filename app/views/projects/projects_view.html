@@ -1,11 +1,21 @@
+
 <form role="form" ng-submit="addProject()">
     <div class="row">
+        <div class="col-lg-2">
         <div class="input-group">
-            <input type="text" ng-model="name" placeholder="请输入项目名称">
-            <input type="submit" value="创建项目" class="btn btn-primary">
+            <input type="text" ng-model="name" class="form-control" placeholder="请输入项目名称">
+            <span class="input-group-btn">
+                <input type="submit" value="创建项目" class="btn btn-primary">
+            </span>
+        </div>
         </div>
     </div>
 </form>
+
+<div class="span2">
+
+</div>
+
 <h4>当前项目</h4>
 <div class="row">
     <div class="col-lg-4 col-md-6" ng-repeat="project in projects | filter:{default:'true'}">
@@ -21,7 +31,7 @@
                             </div>
                             <small style="margin-right:8px;">
                                 <span class="glyphicon glyphicon-folder-open"></span>
-                            </small><a href="/#/project/{{project.projid}}">{{project.projname}}</a><br>
+                            </small><a href="/jQuery/sf-todo/index.html#/project/{{project.projid}}">{{project.projname}}</a><br>
                             <small>创建于:<span>{{project.createtime}}</span></small>
                         </h4>
                         <hr  style="margin:12px 0px;">
@@ -82,7 +92,7 @@
                             </div>
                             <small style="margin-right:8px;">
                                 <span class="glyphicon glyphicon-folder-open"></span>
-                            </small><span ng-bind="project.projname"></span><br>
+                            </small><a href="/jQuery/sf-todo/index.html#/project/{{project.projid}}"><span ng-bind="project.projname"></span></a><br>
                             <small>创建于:<span ng-bind="project.createtime"></span></small>
                         </h4>
                         <hr  style="margin:12px 0px;">

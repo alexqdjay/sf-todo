@@ -9,10 +9,10 @@
 
 	angular.module('sf.routers').config(function(Config, BaseUrl){
 		Config.routers.push({
-			name:'projects.project',
-			url:'/project/:id',
+			name:'project',
+			url:'/project/:projid',
 			views:{
-				'@':{
+				'':{
 					templateUrl: BaseUrl + 'app/views/projects/project_view.html',
 					controller:'ProjectCtrl'
 				}
