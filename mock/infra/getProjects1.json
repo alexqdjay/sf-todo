@@ -16,7 +16,7 @@
     {   "projid": "1",
         "projname": "看书计划",
         "createtime": "2014-5-22",
-        "default": "false",
+        "default": "true",
         "tasks":[
             {   "taskname": "任务三",
                 "creator": "qd",
@@ -35,7 +35,7 @@
     {   "projid": "3",
         "projname": "运动计划",
         "createtime": "2014-11-22",
-        "default": "true",
+        "default": "false",
         "tasks": []
     }
 
